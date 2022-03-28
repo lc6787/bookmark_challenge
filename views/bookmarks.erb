@@ -1,0 +1,10 @@
+<h1>Your Bookmarks</h1>
+
+<a href="https://makers.tech">Makers</a></br>
+<a href="https://github.com/">Github</a></br>
+
+<ul>
+  <% @saved_bookmarks.each do | entry | %>
+    <li><%= entry %></li>
+  <% end %>
+</ul>
