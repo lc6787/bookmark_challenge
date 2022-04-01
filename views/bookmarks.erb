@@ -1,10 +1,15 @@
 <h1>Your Bookmarks</h1>
 
-<a href="https://makers.tech">Makers</a></br>
-<a href="https://github.com/">Github</a></br>
-
 <ul>
-  <% @saved_bookmarks.each do | entry | %>
-    <li><%= entry %></li>
+  <% @saved_bookmarks.each do | bookmark | %>  
+    <li><a href="<%= bookmark['url'] %>"><%= bookmark["name"] %></a></li>
   <% end %>
 </ul>
+
+<form action='/'>
+  <input type='submit' value='Back to homepage' />
+</form>
+
+<form action='/add-bookmark'>
+  <input type='submit' value='Add Bookmark' />
+</form>

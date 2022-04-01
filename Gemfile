@@ -10,3 +10,5 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'webrick'
 gem 'rack'
+
+gem "pg", "~> 1.3"

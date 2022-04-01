@@ -17,6 +17,15 @@ get '/bookmarks' do
   erb :bookmarks
 end
 
+get '/add-bookmark' do
+  erb :add_bookmark
+end
+
+post '/saved-bookmark'do
+  BookmarkEntry.create(params[:bookmark_url], params[:name])
+  redirect '/bookmarks'
+end
+
 run! if app_file == $0
 
 end
